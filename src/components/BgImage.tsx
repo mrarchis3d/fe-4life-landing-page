@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 
 export default function BGImage() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const handleVideoTimeUpdate = () => {
     const video = videoRef.current;
 
