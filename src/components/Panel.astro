@@ -1,0 +1,58 @@
+---
+import CheckIcon from '@heroicons/react/20/solid/CheckIcon';
+
+export interface Props {
+  rightLeft?: boolean;
+  title: string;
+  image: string;
+  description: string;
+  features: string[];
+}
+
+const { rightLeft = false , title, image, description, features } = Astro.props;
+---
+
+<div class="grid md:grid-cols-2 grid-cols-1 gap-1 text-center m-auto w-11/12">
+    {rightLeft ?
+        <div class="py-12 m-auto">
+            <h1 class=" font-bold text-4xl m-4 text-center">{title}</h1>
+            <p class="text-lg m-10 text-center" set:html={description}></p>
+            <div class="mx-10">
+                {features.map((feature) => (
+                    <li class="list-none text-justify my-4">
+                        <CheckIcon
+                            className="h-6 w-5 inline text-green-600"
+                            aria-hidden="true"
+                        />
+                        <p class="font-semibold text-lg inline text-slate-800">{feature}</p> 
+                    </li>
+                ))}
+            </div>
+            
+        </div>
+            <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/40 to-blue-500/10"></div>
+            <img src={image} class="w-full h-full object-cover" />
+        </div> :
+            
+        <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/40 to-blue-500/10"></div>
+            <img src={image} class="w-full h-full object-cover" />
+        </div>
+        <div class="py-24 m-auto">
+            <h1 class="text-4xl m-10 text-center">{title}</h1>
+            <p class="text-lg m-10 text-center">{description}</p>
+            <div>
+                {features.map((feature) => (
+                    <li class="list-none text-center">
+                        <CheckIcon
+                            className="h-6 w-5 inline text-indigo-600"
+                            aria-hidden="true"
+                        />
+                        <p class="text-sm">{feature}</p> 
+                    </li>
+                ))}
+            </div>
+        </div>
+    }
+</div>
