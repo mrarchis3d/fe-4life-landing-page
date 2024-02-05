@@ -1,7 +1,10 @@
 ---
 import Footer from './Footer';
 import Header from './Header';
-import '../style.css'
+import '../style.css';
+import GoToTopButton from '@/components/GoToTopButton ';
+import { FloatingWhatsApp } from 'react-floating-whatsapp2';
+import FloatingButton from '@/components/WhatsAppButton';
 
 export interface Props {
   title: string;
@@ -22,6 +25,8 @@ const { title } = Astro.props;
   <body>
     <Header client:only="react" />
     <slot />
+    <FloatingButton />
+    <GoToTopButton client:only="react" />
     <Footer />
   </body>
 </html>
