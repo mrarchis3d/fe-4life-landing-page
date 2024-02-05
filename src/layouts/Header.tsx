@@ -1,10 +1,6 @@
 import { useState } from 'react';
 import { Dialog, Popover } from '@headlessui/react';
-import {
-  Bars3Icon,
-  XMarkIcon
-} from '@heroicons/react/24/outline';
-
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 // const products = [
 //   {
@@ -47,7 +43,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className='fixed w-full bg-slate-900 z-10'>
+    <header className="fixed w-full bg-blue-800 z-10">
       <nav
         className="mx-auto flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -55,11 +51,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">4Life Shop</span>
-            <img
-              className="h-8 w-auto"
-              src="logobyn.png"
-              alt=""
-            />
+            <img className="h-8 w-auto" src="logobyn.png" alt="" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -142,12 +134,12 @@ export default function Header() {
           >
             Productos
           </a>
-          <a
+          {/* <a
             href="/inscripcion"
             className="text-sm font-semibold leading-6 text-gray-100"
           >
             Inscripción
-          </a>
+          </a> */}
           <a
             href="/contacto"
             className="text-sm font-semibold leading-6 text-gray-100"
@@ -173,11 +165,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="logobyn.png"
-                alt=""
-              />
+              <img className="h-8 w-auto" src="logobyn.png" alt="" />
             </a>
             <button
               type="button"
@@ -225,12 +213,12 @@ export default function Header() {
                 >
                   Productos
                 </a>
-                <a
+                {/* <a
                   href="/inscripcion"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Inscripción
-                </a>
+                </a> */}
                 <a
                   href="/contacto"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
