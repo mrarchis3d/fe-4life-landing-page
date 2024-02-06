@@ -6,7 +6,7 @@ export default function BGImage() {
   const handleVideoTimeUpdate = () => {
     const video = videoRef.current;
 
-    if (video && video.currentTime <= video.duration - 1) {
+    if (video && video.currentTime > 1) {
       setIsVideoLoaded(true);
     }
   };
@@ -32,7 +32,7 @@ export default function BGImage() {
         autoPlay
         loop
         muted
-        poster="loading.gif"
+        poster="tfplusbanner.jpg"
         preload="auto"
         className="m-auto object-cover drop-shadow-2xl"
         onLoadedMetadata={() => setIsVideoLoaded(true)}

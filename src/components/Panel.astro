@@ -1,5 +1,6 @@
 ---
 import CheckIcon from '@heroicons/react/20/solid/CheckIcon';
+import { SeeMore } from './SeeMore';
 
 export interface Props {
   rightLeft?: boolean;
@@ -12,14 +13,16 @@ export interface Props {
 const { rightLeft = false, title, image, description, features } = Astro.props;
 ---
 
-<div class="grid md:grid-cols-2 grid-cols-1 gap-1 text-center m-auto w-11/12">
+<div
+  class="grid md:grid-cols-2 grid-cols-1 gap-1 text-center m-auto w-11/12 mb-10"
+>
   {
     rightLeft ? (
       <>
-        <div class="py-12 m-auto">
-          <h1 class=" font-bold text-2xl m-4 text-center">{title}</h1>
-          <p class="text-md m-10 text-center" set:html={description} />
-          <div class="mx-10">
+        <div class="py-6 m-auto">
+          <h1 class="text-xl text-center">{title}</h1>
+          <p class="p-10 text-center" set:html={description} />
+          <div class="mx-10 sm:block hidden">
             {features.map((feature) => (
               <li class="list-none text-justify my-4">
                 <CheckIcon
@@ -31,21 +34,21 @@ const { rightLeft = false, title, image, description, features } = Astro.props;
             ))}
           </div>
         </div>
-        <div class="relative">
-          <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/40 to-blue-500/10" />
-          <img src={image} class="w-full h-full object-cover" />
+        <div class="flex md:h-screen w-full justify-center items-center">
+          <div class="m-auto bg-gradient-to-r" />
+          <img src={image} class="w-full rounded-md" />
         </div>
       </>
     ) : (
       <>
         <div class="relative">
-          <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/40 to-blue-500/10" />
-          <img src={image} class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-r" />
+          <img src={image} class="w-full" />
         </div>
-        <div class="py-24 m-auto">
+        <div class="py-6 m-auto">
           <h1 class="text-sm m-10 text-center">{title}</h1>
           <p class="text-sm m-10 text-center">{description}</p>
-          <div>
+          <div class="mx-10 sm:block hidden">
             {features.map((feature) => (
               <li class="list-none text-center">
                 <CheckIcon
