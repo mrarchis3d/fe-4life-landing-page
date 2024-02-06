@@ -1,13 +1,14 @@
 ---
-import Card from '@/components/Card.astro';
 import Panel from '@/components/Panel.astro';
 import Promotion from '@/components/Promotion.astro';
 import Layout from '@/layouts/Layout.astro';
 import {
-  getProducts,
+  getFeaturedProducts,
   featuresPanelProTF,
   PanelProTFText,
+  productCodes,
 } from '../data/products';
+import Card from '@/components/Card';
 ---
 
 <Layout title="productos">
@@ -44,40 +45,40 @@ import {
       </div>
     </div>
   </div>
+
+  <div class="mx-auto max-w-7xl py-12 lg:py-24">
+    <ul role="list" class="grid gap-4 md:grid-cols-3 grid-cols-1">
+      {
+        getFeaturedProducts([productCodes.RIOVIDA]).map((product) => (
+          <Card
+            client:load
+            url={product.url}
+            image={product.image}
+            title={product.title}
+            description={product.description}
+            price={product.price}
+            prevPrice={product.prevPrice}
+            saving={product.saving}
+            code={product.code}
+          />
+        ))
+      }
+    </ul>
+  </div>
+  <div class="text-center mb-10">
+    <a
+      target="_blank"
+      href="https://media2.4life.com/document/ListadepreciosEne2024v4.pdf"
+      class="p-5 transition duration-300 rounded-full shadow-lg bg-amber-600 hover:bg-amber-200 text-white hover:text-slate-900"
+      >Ver Lista de Precios Completa</a
+    >
+  </div>
   <Panel
     rightLeft={true}
     title="Pro-TF"
     description={PanelProTFText}
     image="protf_splash.png"
     features={featuresPanelProTF}
-  />
-  <div class="mx-auto max-w-7xl py-12 lg:py-24">
-    <ul role="list" class="grid gap-4 md:grid-cols-3 grid-cols-1">
-      {
-        getProducts().map((product) => (
-          <Card
-            href={product.url}
-            image={product.image}
-            title={product.title}
-            body={product.description}
-            price={product.price}
-            prevPrice={product.prevPrice}
-          />
-        ))
-      }
-    </ul>
-  </div>
-
-  <Promotion
-    image="loyalty-program.jpg"
-    title=""
-    description="COMIENZA A RECIBIR PRODUCTOS ¡HOY MISMO!"
-    features={[
-      'Únete al Programa de Lealtad de 4Life® y empieza a recibir tus productos favoritos cada mes, al solicitar tu orden de Lealtad.',
-      'Hasta un 15% en Puntos Redimibles para canjear por tus productos favoritos. Puedes obtener un máximo de 75 puntos al mes!',
-      'Canjea tus Puntos por productos 4Life de tu elección.',
-      'Recibirás un Producto de Lealtad del Mes, si mantienes tu orden mensual de 125 LP o más con el ¡Programa de Lealtad!',
-    ]}
   />
 </Layout>
 

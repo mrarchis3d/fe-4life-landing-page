@@ -43,7 +43,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed w-full bg-blue-800 z-10">
+    <header className="fixed w-full bg-gradient-to-r from-sky-500 to-indigo-500 z-10">
       <nav
         className="mx-auto flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -128,6 +128,9 @@ export default function Header() {
             </Transition>
           </Popover> */}
 
+          <a href="/" className="text-sm font-semibold leading-6 text-gray-100">
+            Inicio
+          </a>
           <a
             href="/productos"
             className="text-sm font-semibold leading-6 text-gray-100"
@@ -207,6 +210,12 @@ export default function Header() {
                     </>
                   )}
                         </Disclosure> */}
+                <a
+                  href="/"
+                  className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Inicio
+                </a>
                 <a
                   href="/productos"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
