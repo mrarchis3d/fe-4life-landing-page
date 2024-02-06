@@ -4,17 +4,21 @@ export type Product = {
   image: string;
   description: string;
   price: string;
-  prevPrice: string;
+  prevPrice?: string;
+  saving?: string;
   url: string;
 };
 
 export enum productCodes {
+  RIOVIDA = 'RIOVIDA',
   TFPLUS = 'TFPLUS',
   TFBCV = 'TFBCV',
   RENUVO = 'RENUVO',
   BOOST = 'BOOST',
   COLLAGEN = 'COLLAGEN',
   FIBRE = 'FIBRE',
+  PAQ_INICIO_ACELERADO = 'PAQ_INICIO_ACELERADO',
+  PAQ_CUIDADO_BIENESTAR = 'PAQ_CUIDADO_BIENESTAR',
 }
 
 const productsData: Product[] = [
@@ -90,9 +94,74 @@ const productsData: Product[] = [
     prevPrice: '$194.000',
     url: '',
   },
+  {
+    code: productCodes.PAQ_INICIO_ACELERADO,
+    title: 'Paquete de Inicio Acelerado Fundamental',
+    image: 'paq_inicioacelerado.jpg',
+    description: `Combina los productos estrella de 4Life que son ideales para tu bienestar general. 
+          <strong>¡Adquiere ya tu paquete y maximiza tus ganancias!</strong> Aprovecha esta gran oportunidad que solo 4Life te da: <br/>
+          5 - 4Life® Transfer Factor Plus™ Tri-Factor® Formula <br/>
+          5 - 4Life Transfer Factor RioVida® Tri-Factor® Formula<br/>
+          5 - 4Life Transfer Factor® Tri-Factor® Formula<br/>
+          1 - Maletín 4Life - Imagen de referencia `,
+    price: '$1.820.000',
+    saving: '$607.000',
+    url: '',
+  },
+  {
+    code: productCodes.PAQ_CUIDADO_BIENESTAR,
+    title: 'Cuidado y Bienestar 4Life',
+    image: 'cuidadobienestar.png',
+    description: `En 4Life, nos interesa tu bienestar, y nos complace presentarte este excepcional paquete que reúne productos premium. 
+        Obtén el tuyo ahora y experimenta todos los beneficios. ¡Cuida de tu bienestar con 4Life! Contiene: <br/>
+        1 - 4Life® Transfer Factor Plus™ Tri-Factor® Formula<br/>
+        2 - 4Life Transfer Factor RioVida® Tri-Factor® Formula<br/>
+        1 - 4Life Transfer Factor Collagen<br/>
+        1 - 4Life Transfer Factor® Tri-Factor® Formula RioVida STIX™<br/>
+        2 - 4Life TF-Boost`,
+    price: '$747.000',
+    saving: '$246.500',
+    url: '',
+  },
+  {
+    code: productCodes.RIOVIDA,
+    title: '4Life Transfer Factor RioVida® Tri-Factor® Formula',
+    image: 'riovida.jpg',
+    description: `4Life Transfer Factor RioVida Tri-Factor Formula, 
+    contiene ademas concentrado de jugo de granada, mora azul, manzana, 
+    uva y un bajo contenido de proteínas extraídas del suero de leche 
+    y yema de huevo, que lo convierten en una bebida con valor nutricional, 
+    con un delicioso sabor a frutas. <strong> Contiene 4Life Transfer Factor. </strong>`,
+    price: '$116.100',
+    saving: '$38.300',
+    url: '',
+  },
 ];
 
 export const getProducts = (): Product[] => productsData;
+
+export const getFeaturedProducts = (featuredValues?: string[]): Product[] => {
+  const sortedProducts = productsData.sort((a) => {
+    const codeA = a.code.toUpperCase();
+    if (codeA.startsWith('PAQ_')) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+  if (featuredValues !== undefined && featuredValues!.length > 0) {
+    const sortedFeatures = sortedProducts.sort((a) => {
+      const codeA = a.code.toUpperCase();
+      if (featuredValues.find((x) => x.toUpperCase() == codeA)) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+    return sortedFeatures;
+  }
+  return sortedProducts;
+};
 
 export const findByCode = function (code: string): Product | null {
   return productsData.find((x) => x.code === code.toUpperCase())!;

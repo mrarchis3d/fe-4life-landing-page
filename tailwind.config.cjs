@@ -8,11 +8,11 @@ module.exports = {
 			}
 		},
 		fontSize: {
-			xs: '0.8rem',
-			sm: '1rem',
-			base: '1.25rem',
+			xs: '0.6rem',
+			sm: '0.8rem',
+			base: '1rem',
 			md: '1.25rem',
-			lg: '1.65rem',
+			lg: '1.5rem',
 			xl: '2rem',
 			'2xl': '2.5rem',
 			'3xl': '3rem',

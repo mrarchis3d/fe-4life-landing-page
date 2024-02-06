@@ -1,24 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import MetodosPago from '../components/MetodosPago';
 import Feature from '@/components/Feature';
 import BGImage from '@/components/BgImage';
-import Alert from '@/components/Alert.astro';
 import { getProducts } from '@/data/products';
+import Card from '@/components/Card';
+import Promotion from '@/components/Promotion.astro';
 ---
 
 <Layout title="Welcome to 4Life Shop.">
   <main class="mx-auto max-w-7xl py-12 lg:py-24">
-    <BGImage client:load />
-    <Alert />
-    <h1 class="font-extrabold text-zinc-800 text-4xl mt-12">
+    <BGImage client:only="react" />
+    <!-- <Alert /> -->
+    <h1 class="font-extrabold text-zinc-800 text-2xl mt-12">
       <span class="text-gradient">4life Shop</span>
     </h1>
     <p class="instructions">
       Encuentra todos los productos de 4Life que necesites aquí.<br />
       <strong>Comuníquese con nosotros:</strong>
-      Recibe los mejores descuentos de nuestros productos
+      Reciba los mejores descuentos de nuestros productos
     </p>
     <ul role="list" class="link-card-grid">
       {
@@ -26,18 +26,32 @@ import { getProducts } from '@/data/products';
           .slice(0, 3)
           .map((product) => (
             <Card
-              href={product.url}
+              code={product.code}
+              client:only="react"
+              url={product.url}
               image={product.image}
               title={product.title}
-              body={product.description}
+              description={product.description}
               price={product.price}
               prevPrice={product.prevPrice}
+              saving={product.saving}
             />
           ))
       }
     </ul>
   </main>
   <MetodosPago client:only="react" />
+  <Promotion
+    image="loyalty-program.jpg"
+    title=""
+    description="COMIENZA A RECIBIR PRODUCTOS ¡HOY MISMO!"
+    features={[
+      'Únete al Programa de Lealtad de 4Life® y empieza a recibir tus productos favoritos cada mes, al solicitar tu orden de Lealtad.',
+      'Hasta un 15% en Puntos Redimibles para canjear por tus productos favoritos. Puedes obtener un máximo de 75 puntos al mes!',
+      'Canjea tus Puntos por productos 4Life de tu elección.',
+      'Recibirás un Producto de Lealtad del Mes, si mantienes tu orden mensual de 125 LP o más con el ¡Programa de Lealtad!',
+    ]}
+  />
   <Feature />
 </Layout>
 
@@ -80,3 +94,4 @@ import { getProducts } from '@/data/products';
     padding: 0;
   }
 </style>
+../components/Card.tsx
