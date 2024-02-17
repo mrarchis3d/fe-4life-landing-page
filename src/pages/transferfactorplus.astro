@@ -1,3 +1,14 @@
-import Layout from '@/layouts/Layout.astro'
+---
+import BGImage from '@/components/BgImage';
+import Feature from '@/components/Feature';
+import Layout from '@/layouts/Layout.astro';
+---
 
 <!-- <Layout title="a"> </Layout> -->
+<Layout title="TransferFactor">
+  <div class="pt-24">
+    <BGImage client:only="react" />
+  </div>
+
+  <Feature />
+</Layout>

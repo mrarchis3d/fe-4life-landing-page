@@ -36,7 +36,7 @@ const Card: React.FC<Product> = ({
               <div className="border-l-2 border-red-300 pl-2">
                 {prevPrice ? (
                   <>
-                    <p className="text-sm line-through leading-3 text-red-900">
+                    <p className="text-sm line-through leading-3 text-red-200">
                       {prevPrice}
                     </p>
                   </>
