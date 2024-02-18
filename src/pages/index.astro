@@ -4,9 +4,11 @@ import MetodosPago from '../components/MetodosPago';
 import { getProducts } from '@/data/products';
 import Card from '@/components/Card';
 import Promotion from '@/components/Promotion.astro';
+import CoverImage from '@/components/CoverImage.astro';
 ---
 
 <Layout title="Welcome to 4Life Shop.">
+  <CoverImage />
   <main class="mx-auto max-w-7xl py-12 lg:py-24">
     <!-- <Alert /> -->
     <h1 class="font-extrabold text-zinc-800 text-2xl mt-12">
@@ -17,6 +19,16 @@ import Promotion from '@/components/Promotion.astro';
       <strong>Comuníquese con nosotros:</strong>Reciba los mejores descuentos de
       nuestros productos
     </p>
+    <div
+      class="mb-10 m-auto items-center text-slate-100 hover:drop-shadow-lg drop-shadow-none"
+    >
+      <a
+        href="/productos"
+        class="p-3 rounded-lg transition-all ease-in-out duration-700 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-500 hover:to-red-600"
+      >
+        Ver Productos
+      </a>
+    </div>
     <ul role="list" class="link-card-grid">
       {
         getProducts()

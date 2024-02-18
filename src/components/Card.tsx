@@ -21,7 +21,7 @@ const Card: React.FC<Product> = ({
         <br />
         <br />
         <div className="block">
-          <a href={url} className="inline-flex items-center">
+          <a target="_blank" href={url} className="inline-flex items-center">
             <div className="flex p-2 transition hover:ease-out duration-300 bg-red-600 hover:bg-red-500 rounded-md ">
               <div className="mr-1 m-auto">
                 <svg
@@ -54,7 +54,7 @@ const Card: React.FC<Product> = ({
                 )}
 
                 <p className="md:text-md text-slate-100">
-                  {saving ? <></> : <p className="text-sm"></p>}
+                  {saving ? <></> : <span className="text-sm"></span>}
                   {price}
                 </p>
               </div>
