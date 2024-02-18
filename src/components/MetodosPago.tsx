@@ -1,5 +1,3 @@
-import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline';
-
 export default function MetodosPago() {
   return (
     <div
@@ -12,30 +10,35 @@ export default function MetodosPago() {
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-5">
               Métodos de pago
             </h2>
-            <p className="text-md text-white">Usamos todos los medios de pagos, incluyendo: pagos por tarjeta de crédito, Bancolombia, Efecty, PSE y transferencias bancarias. 
-            <br/> ¿Tienes dudas? <br/> Comunícate con Nosotros a las lineas: <br/> Whatsapp: +57 (315) 252 5423
-            <br/>Facebook: http://facebook/4lifeshopbogota</p>
+            <p className="text-md text-white">
+              Usamos todos los medios de pagos, incluyendo: pagos por tarjeta de
+              crédito, Bancolombia, Efecty, PSE y transferencias bancarias.
+              <br /> ¿Tienes dudas? <br /> Comunícate con Nosotros a las lineas:{' '}
+              <br /> Whatsapp: +57 (315) 252 5423
+              <br />
+              Facebook: http://facebook/4lifeshopbogota
+            </p>
           </div>
           <div className=" bg-white/75 md:p-10 p-4 md:rounded-full rounded-lg items-center grid md:grid-cols-6 grid-cols-3  gap-2">
-              <div className="flex flex-col items-start">
-                  <img src="efecty.png"/>
-              </div>
-              <div className="flex flex-col items-start">
-                  <img src="sured.png"/>
-              </div>
-              <div className="flex flex-col items-start">
-                  <img src="pse.png"/>
-              </div>
-              <div className="flex flex-col items-start">
-                  <img src="bancolombia.png"/>
-              </div>
-              <div className="flex flex-col items-start">
-                  <img src="mastercard.png"/>
-              </div>
-              <div className="flex flex-col items-start">
-                  <img src="visa.png"/>
-              </div>
+            <div className="flex flex-col items-start">
+              <img src="efecty.png" />
             </div>
+            <div className="flex flex-col items-start">
+              <img src="sured.png" />
+            </div>
+            <div className="flex flex-col items-start">
+              <img src="pse.png" />
+            </div>
+            <div className="flex flex-col items-start">
+              <img src="bancolombia.png" />
+            </div>
+            <div className="flex flex-col items-start">
+              <img src="mastercard.png" />
+            </div>
+            <div className="flex flex-col items-start">
+              <img src="visa.png" />
+            </div>
+          </div>
         </div>
       </div>
       <svg

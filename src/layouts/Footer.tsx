@@ -1,8 +1,4 @@
-import {
-  PhoneArrowUpRightIcon,
-  GlobeAltIcon,
-  CursorArrowRaysIcon,
-} from '@heroicons/react/24/outline';
+import { GlobeAltIcon, CursorArrowRaysIcon } from '@heroicons/react/24/outline';
 
 export default function Footer() {
   return (

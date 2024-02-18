@@ -32,7 +32,7 @@ const productsData: Product[] = [
         4Life Transfer Factor Plus aporta <strong>22% del VDR de zinc por cápsula.</strong>`,
     price: '$204.500',
     prevPrice: '$272.000',
-    url: '',
+    url: 'https://api.whatsapp.com/send?phone=+573227705724&text=Saludos,%20necesito%20comprar%20el%20producto%204Life%20Transfer%20Factor%C2%A0%E2%AD%90',
   },
   {
     code: productCodes.TFBCV,
@@ -44,7 +44,7 @@ const productsData: Product[] = [
         puede contribuir a la salud del corazón.</strong>`,
     price: '$202.200',
     prevPrice: '$268.900',
-    url: '',
+    url: 'https://api.whatsapp.com/send?phone=+573227705724&text=Saludos,%20necesito%20comprar%20el%20producto%204Life%20Transfer%20Factor%C2%AE%20BCV+%E2%AD%90',
   },
   {
     code: productCodes.RENUVO,
@@ -56,7 +56,7 @@ const productsData: Product[] = [
         7,4 mg de zinc equivalente a <strong>49% del VDR de zinc</strong> por porción.`,
     price: '$185.700',
     prevPrice: '$247.000',
-    url: '',
+    url: 'https://api.whatsapp.com/send?phone=+573227705724&text=Saludos,%20necesito%20comprar%20el%20producto%204Life%204Life%20Transfer%20Factor%20Renuvo%C2%AE%C2%A0%E2%AD%90',
   },
   {
     code: productCodes.BOOST,
@@ -68,7 +68,7 @@ const productsData: Product[] = [
         Además de 1000 mg de la mezcla Transfer Factor</strong>`,
     price: '$80.000',
     prevPrice: '$106.400',
-    url: '',
+    url: 'https://api.whatsapp.com/send?phone=+573227705724&text=Saludos,%20necesito%20comprar%20el%20producto%204LIFE%20TF-BOOST%E2%AD%90',
   },
   {
     code: productCodes.COLLAGEN,
@@ -80,7 +80,7 @@ const productsData: Product[] = [
         naturales. <strong>Excelente fuente de vitamina A y C. Buena fuente de vitamina E.</strong>`,
     price: '$145.900',
     prevPrice: '$194.000',
-    url: '',
+    url: 'https://api.whatsapp.com/send?phone=+573227705724&text=Saludos,%20necesito%20comprar%20el%20producto%204Life%20Transfer%20Factor%20Collagen%E2%AD%90',
   },
   {
     code: productCodes.FIBRE,
@@ -92,7 +92,7 @@ const productsData: Product[] = [
         <strong> Contiene 25 ingredientes herbales que benefician a tu organismo. </strong>`,
     price: '$145.900',
     prevPrice: '$194.000',
-    url: '',
+    url: 'https://api.whatsapp.com/send?phone=+573227705724&text=Saludos,%20necesito%20comprar%20el%20producto%20Fibre%20System%E2%AD%90',
   },
   {
     code: productCodes.PAQ_INICIO_ACELERADO,
@@ -106,7 +106,7 @@ const productsData: Product[] = [
           1 - Maletín 4Life - Imagen de referencia `,
     price: '$1.820.000',
     saving: '$607.000',
-    url: '',
+    url: 'https://api.whatsapp.com/send?phone=+573227705724&text=Saludos,%20necesito%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Paquete%20de%20Inicio%20Acelerado%20Fundamental%E2%AD%90',
   },
   {
     code: productCodes.PAQ_CUIDADO_BIENESTAR,
@@ -121,7 +121,7 @@ const productsData: Product[] = [
         2 - 4Life TF-Boost`,
     price: '$747.000',
     saving: '$246.500',
-    url: '',
+    url: 'https://api.whatsapp.com/send?phone=+573227705724&text=Saludos,%20necesito%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Paquete%20Cuidado%20y%20Bienestar%204Life%E2%AD%90',
   },
   {
     code: productCodes.RIOVIDA,
@@ -134,7 +134,7 @@ const productsData: Product[] = [
     con un delicioso sabor a frutas. <strong> Contiene 4Life Transfer Factor. </strong>`,
     price: '$116.100',
     saving: '$38.300',
-    url: '',
+    url: 'https://api.whatsapp.com/send?phone=+573227705724&text=Saludos,%20necesito%20comprar%20el%20producto%204Life%20Transfer%20Factor%20RioVida%C2%AE%20Tri-Factor%C2%AE%20Formula%C2%A0%E2%AD%90',
   },
 ];
 

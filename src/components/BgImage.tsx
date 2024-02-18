@@ -26,7 +26,7 @@ export default function BGImage() {
   }, []);
 
   return (
-    <div className="h-7/12 m-auto mt-14 mb-5">
+    <div className="h-7/12 m-auto mb-5">
       <video
         ref={videoRef}
         autoPlay

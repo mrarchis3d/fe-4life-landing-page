@@ -137,6 +137,12 @@ export default function Header() {
           >
             Productos
           </a>
+          <a
+            href="/transferfactorplus"
+            className="text-sm font-semibold leading-6 text-gray-100"
+          >
+            4Life Transfer Factor Plus
+          </a>
           {/* <a
             href="/inscripcion"
             className="text-sm font-semibold leading-6 text-gray-100"
@@ -221,6 +227,12 @@ export default function Header() {
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Productos
+                </a>
+                <a
+                  href="/transferfactorplus"
+                  className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  4Life Transfer Factor Plus
                 </a>
                 {/* <a
                   href="/inscripcion"
