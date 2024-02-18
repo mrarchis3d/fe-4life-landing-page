@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import node from '@astrojs/node';
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
@@ -16,7 +15,6 @@ export default defineConfig({
   adapter: vercel({
     analytics: true
   }),
-  experimental: { assets: true },
   integrations: [react(), tailwind()],
   markdown: {
     // Example: Switch to use prism for syntax highlighting in Markdown
