@@ -1,25 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MetodosPago from '../components/MetodosPago';
-import Feature from '@/components/Feature';
-import BGImage from '@/components/BgImage';
 import { getProducts } from '@/data/products';
 import Card from '@/components/Card';
 import Promotion from '@/components/Promotion.astro';
+import CoverImage from '@/components/CoverImage.astro';
 ---
 
 <Layout title="Welcome to 4Life Shop.">
+  <CoverImage />
   <main class="mx-auto max-w-7xl py-12 lg:py-24">
-    <BGImage client:only="react" />
     <!-- <Alert /> -->
     <h1 class="font-extrabold text-zinc-800 text-2xl mt-12">
       <span class="text-gradient">4life Shop</span>
     </h1>
     <p class="instructions">
       Encuentra todos los productos de 4Life que necesites aquí.<br />
-      <strong>Comuníquese con nosotros:</strong>
-      Reciba los mejores descuentos de nuestros productos
+      <strong>Comuníquese con nosotros:</strong>Reciba los mejores descuentos de
+      nuestros productos
     </p>
+    <div
+      class="mb-10 m-auto items-center text-slate-100 hover:drop-shadow-lg drop-shadow-none"
+    >
+      <a
+        href="/productos"
+        class="p-3 rounded-lg transition-all ease-in-out duration-700 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-500 hover:to-red-600"
+      >
+        Ver Productos
+      </a>
+    </div>
     <ul role="list" class="link-card-grid">
       {
         getProducts()
@@ -52,7 +61,6 @@ import Promotion from '@/components/Promotion.astro';
       'Recibirás un Producto de Lealtad del Mes, si mantienes tu orden mensual de 125 LP o más con el ¡Programa de Lealtad!',
     ]}
   />
-  <Feature />
 </Layout>
 
 <style>
@@ -93,5 +101,4 @@ import Promotion from '@/components/Promotion.astro';
     gap: 1rem;
     padding: 0;
   }
-</style>
-../components/Card.tsx
+</style>../components/Card.tsx
