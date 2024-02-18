@@ -2,8 +2,6 @@
 import { ZoomableImage } from './ZoomableImage';
 import BannerBackground from '../assets/BannerBackground.png';
 import logoInvima from '../assets/logo_invima.png';
-import { getImage } from 'astro:assets';
-const optimizedBackground = await getImage({ src: BannerBackground });
 ---
 
 <div class="pt-20">
@@ -11,7 +9,7 @@ const optimizedBackground = await getImage({ src: BannerBackground });
     <div
       id="clip-bg"
       style={`
-            background-image: url(${optimizedBackground.src});
+            background-image: url(${BannerBackground.src});
         `}
       class="h-[780px] md:w-full relative"
     >

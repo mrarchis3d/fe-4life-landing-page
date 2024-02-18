@@ -1,6 +1,4 @@
-import {
-  CheckIcon
-} from '@heroicons/react/20/solid';
+import { CheckIcon } from '@heroicons/react/20/solid';
 
 const features = [
   {
@@ -12,15 +10,15 @@ const features = [
   {
     name: 'Somos pioneros en la Ciencia Transferceutical: ',
     description:
-      '4Life ha sido pionero en la Ciencia Transferceutical™ y se dedica a seguir aprendiendo más acerca de los factores de transferencia.'
-      +'Las instalaciones de fabricación de 4Life están certificadas por la National Sanitation Foundation (NSF)',
+      '4Life ha sido pionero en la Ciencia Transferceutical™ y se dedica a seguir aprendiendo más acerca de los factores de transferencia.' +
+      'Las instalaciones de fabricación de 4Life están certificadas por la National Sanitation Foundation (NSF)',
     icon: CheckIcon,
   },
   {
     name: 'La Mejor forma de mantenerte saludable',
     description:
-      'La mejor defensa es una buena ofensiva, por lo que 4Life Transfer Factor ayuda a mantener un cuerpo saludable.'
-      +' Cuando tu sistema inmunológico funciona en su punto máximo, todo tu cuerpo se beneficia, incluyendo tus niveles de energía',
+      'La mejor defensa es una buena ofensiva, por lo que 4Life Transfer Factor ayuda a mantener un cuerpo saludable.' +
+      ' Cuando tu sistema inmunológico funciona en su punto máximo, todo tu cuerpo se beneficia, incluyendo tus niveles de energía',
     icon: CheckIcon,
   },
 ];
@@ -39,8 +37,10 @@ export default function Feature() {
                 Beneficios
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-              4Life utiliza procesos patentados para extraer factores de transferencia de calostro de vaca y yemas de huevo de pollo, 
-              para luego secarlos y encapsularlos para su uso en productos de 4Life.
+                4Life utiliza procesos patentados para extraer factores de
+                transferencia de calostro de vaca y yemas de huevo de pollo,
+                para luego secarlos y encapsularlos para su uso en productos de
+                4Life.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
