@@ -16,7 +16,6 @@ export default defineConfig({
   adapter: vercel({
     analytics: true
   }),
-  experimental: { assets: true },
   integrations: [react(), tailwind()],
   markdown: {
     // Example: Switch to use prism for syntax highlighting in Markdown
