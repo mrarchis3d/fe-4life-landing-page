@@ -1,8 +1,8 @@
 /// <reference types="astro/client" />
 
 interface ImportMetaEnv {
-  //   readonly DB_PASSWORD: string;
-  //   readonly PUBLIC_POKEAPI: string;
+  readonly PUBLIC_FORMSPREE_KEY: string;
+  readonly SECRET_KEY_CAPTCHA: string;
   // more env variables...
 }
 

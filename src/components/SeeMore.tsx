@@ -13,7 +13,10 @@ export const SeeMore: React.FC<Props> = ({ body }) => {
   return (
     <>
       <p dangerouslySetInnerHTML={{ __html: isOpen ? body : '' }} />
-      <a className="mb-4 underline" onClick={toggleExpand}>
+      <a
+        className="mb-4 text-slate-800 hover:text-green-600 underline"
+        onClick={toggleExpand}
+      >
         {isOpen ? <>...ver menos</> : <>ver características..</>}
       </a>
     </>
