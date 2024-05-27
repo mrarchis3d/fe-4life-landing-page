@@ -18,8 +18,6 @@ export default defineConfig({
   integrations: [
     react(),
     tailwind(),
-    mdx(),
-    sitemap(),
     partytown({
       config: {
         forward: ['dataLayer.push'],
