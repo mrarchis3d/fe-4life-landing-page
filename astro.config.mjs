@@ -15,7 +15,17 @@ export default defineConfig({
   adapter: vercel({
     analytics: true,
   }),
-  integrations: [react(), tailwind()],
+  integrations: [
+    react(), 
+    tailwind(),
+    mdx(), 
+		sitemap(),
+		partytown({
+			config: {
+			  forward: ["dataLayer.push"],
+			},
+		}),
+  ],
   markdown: {
     // Example: Switch to use prism for syntax highlighting in Markdown
     syntaxHighlight: 'prism',
