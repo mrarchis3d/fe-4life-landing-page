@@ -16,15 +16,15 @@ export default defineConfig({
     analytics: true,
   }),
   integrations: [
-    react(), 
+    react(),
     tailwind(),
-    mdx(), 
-		sitemap(),
-		partytown({
-			config: {
-			  forward: ["dataLayer.push"],
-			},
-		}),
+    mdx(),
+    sitemap(),
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
   ],
   markdown: {
     // Example: Switch to use prism for syntax highlighting in Markdown
