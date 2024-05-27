@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
-
+import partytown from '@astrojs/partytown'
 import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
@@ -15,7 +15,15 @@ export default defineConfig({
   adapter: vercel({
     analytics: true,
   }),
-  integrations: [react(), tailwind()],
+  integrations: [
+    react(),
+    tailwind(),
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
+  ],
   markdown: {
     // Example: Switch to use prism for syntax highlighting in Markdown
     syntaxHighlight: 'prism',
