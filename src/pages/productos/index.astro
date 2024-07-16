@@ -2,12 +2,13 @@
 import Panel from '@/components/Panel.astro';
 import Layout from '@/layouts/Layout.astro';
 import {
-  getFeaturedProducts,
   featuresPanelProTF,
   PanelProTFText,
-  productCodes,
+type Product,
 } from '../../data/products';
 import Card from '@/components/Card';
+const response = await fetch("http://127.0.0.1:8000/v1/products")
+let data = await response.json()
 ---
 
 <Layout title="productos">
@@ -17,19 +18,24 @@ import Card from '@/components/Card';
     </div>
     <ul role="list" class="grid gap-4 md:grid-cols-3 grid-cols-1">
       {
-        getFeaturedProducts([productCodes.RIOVIDA]).map((product) => (
-          <Card
+        data.map((product:Product)=> 
+        <Card
             client:load
+            id={product.id}
             url={product.url}
             image={product.image}
-            title={product.title}
-            description={product.description}
+            name={product.name}
+            shortDescription={product.shortDescription}
             price={product.price}
             prevPrice={product.prevPrice}
             saving={product.saving}
             code={product.code}
+            isActive={product.isActive}
+            order={product.order}
+            isPackage={product.isActive}
+            longDescription={product.longDescription}
           />
-        ))
+        )
       }
     </ul>
   </div>
