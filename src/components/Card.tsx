@@ -21,7 +21,12 @@ const Card: React.FC<Product> = ({
         <br />
         <br />
         <div className="block">
-          <a target="_blank" href={url} className="inline-flex items-center">
+          <a
+            target="_blank"
+            id="comprar_event"
+            href={url}
+            className="inline-flex items-center"
+          >
             <div className="flex p-2 transition hover:ease-out duration-300 bg-red-600 hover:bg-red-500 rounded-md ">
               <div className="mr-1 m-auto">
                 <svg
