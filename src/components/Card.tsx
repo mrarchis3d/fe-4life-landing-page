@@ -10,6 +10,11 @@ const Card: React.FC<Product> = ({
   url,
   saving,
 }) => {
+  const handleButtonClick = (url: string) => {
+    // @ts-ignore: gtag_report_conversion is defined in the global scope
+    gtag_report_conversion(url);
+  };
+
   return (
     <div className="link-card flex p-1 bg-white">
       <div className="p-4 text-center">
@@ -22,6 +27,7 @@ const Card: React.FC<Product> = ({
         <br />
         <div className="block">
           <a
+            onClick={() => handleButtonClick(url)}
             target="_blank"
             id="comprar_event"
             href={url}
