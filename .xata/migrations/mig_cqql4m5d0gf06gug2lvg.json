@@ -1,0 +1,22 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cqql4m5d0gf06gug2lvg",
+    "operations": [
+      {
+        "alter_column": {
+          "up": "(SELECT CASE WHEN \"url\" IS NULL THEN '' ELSE \"url\" END)",
+          "down": "(SELECT CASE WHEN \"url\" IS NULL THEN '' ELSE \"url\" END)",
+          "table": "products",
+          "column": "url",
+          "nullable": false
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cqql4m5d0gf06gug2lvg",
+  "parent": "mig_cqql4ih40q6j9lp6nrj0",
+  "schema": "public",
+  "startedAt": "2024-08-08T23:18:49.512771Z"
+}
