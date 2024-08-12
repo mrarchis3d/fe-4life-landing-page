@@ -1,6 +1,0 @@
-{
-  "databaseURL": "https://mrarchis3d-s-workspace-nd628j.us-east-1.xata.sh/db/4life-db",
-  "codegen": {
-    "output": "src/xata.ts"
-  }
-}
