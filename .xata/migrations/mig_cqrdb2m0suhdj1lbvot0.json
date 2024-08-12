@@ -1,0 +1,22 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cqrdb2m0suhdj1lbvot0",
+    "operations": [
+      {
+        "drop_constraint": {
+          "up": "\"order\"",
+          "down": "\"order\"",
+          "name": "products__pgroll_new_order_key",
+          "table": "products",
+          "column": "order"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cqrdb2m0suhdj1lbvot0",
+  "parent": "mig_cqrdau60suhdj1lbvos0",
+  "schema": "public",
+  "startedAt": "2024-08-10T02:50:51.515536Z"
+}

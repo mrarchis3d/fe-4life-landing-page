@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cqrdau60suhdj1lbvos0",
+    "operations": [
+      {
+        "add_column": {
+          "table": "products",
+          "column": {
+            "pk": false,
+            "name": "order",
+            "type": "int",
+            "unique": true,
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cqrdau60suhdj1lbvos0",
+  "parent": "mig_cqql4m5d0gf06gug2lvg",
+  "schema": "public",
+  "startedAt": "2024-08-10T02:50:33.446494Z"
+}
