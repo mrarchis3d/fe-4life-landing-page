@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import MetodosPago from '../components/MetodosPago';
 import { getProducts } from '@/data/products';
-import { GetMoney } from '@/utils/globalutilities';
 import Card from '@/components/Card';
 import Promotion from '@/components/Promotion.astro';
 import CoverImage from '@/components/CoverImage.astro';
@@ -37,14 +36,14 @@ import CoverImage from '@/components/CoverImage.astro';
           .map((product) => (
             <Card
               code={product.code}
-              client:load
+              client:only="react"
               url={product.url}
               image={product.image}
               title={product.title}
-              description={product.short_description}
-              price={GetMoney(product.price)}
-              prevPrice={GetMoney(product.prev_price)}
-              saving={GetMoney(product.saving)}
+              description={product.description}
+              price={product.price}
+              prevPrice={product.prevPrice}
+              saving={product.saving}
             />
           ))
       }
