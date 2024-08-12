@@ -8,7 +8,6 @@ import {
   productCodes,
 } from '../../data/products';
 import Card from '@/components/Card';
-import { GetMoney } from '@/utils/globalutilities';
 ---
 
 <Layout title="productos">
@@ -24,10 +23,10 @@ import { GetMoney } from '@/utils/globalutilities';
             url={product.url}
             image={product.image}
             title={product.title}
-            description={product.short_description}
-            price={GetMoney(product.price)}
-            prevPrice={GetMoney(product.prev_price)}
-            saving={GetMoney(product.saving)}
+            description={product.description}
+            price={product.price}
+            prevPrice={product.prevPrice}
+            saving={product.saving}
             code={product.code}
           />
         ))

@@ -22,4 +22,3 @@ pnpm-debug.log*
 
 # vercel build
 .vercel
-.env.development
