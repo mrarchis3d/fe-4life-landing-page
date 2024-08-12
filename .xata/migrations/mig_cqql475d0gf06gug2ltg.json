@@ -1,0 +1,20 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cqql475d0gf06gug2ltg",
+    "operations": [
+      {
+        "drop_column": {
+          "down": "''",
+          "table": "products",
+          "column": "price"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cqql475d0gf06gug2ltg",
+  "parent": "mig_cqql425d0gf06gug2lsg",
+  "schema": "public",
+  "startedAt": "2024-08-08T23:17:49.211608Z"
+}

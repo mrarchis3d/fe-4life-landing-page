@@ -26,13 +26,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 //     description: 'Connect with third-party tools',
 //     href: '#',
 //     icon: SquaresPlusIcon,
-//   },
-//   {
-//     name: 'Automations',
-//     description: 'Build strategic funnels that will convert',
-//     href: '#',
-//     icon: ArrowPathIcon,
-//   },
+//   }
 // ];
 // const callsToAction = [
 //   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
