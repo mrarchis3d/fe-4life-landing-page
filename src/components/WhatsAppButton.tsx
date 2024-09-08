@@ -3,7 +3,7 @@ import type React from 'react';
 const FloatingButton: React.FC = () => {
   return (
     <a
-      href="https://wa.link/z9zim3"
+      href="https://wa.me/message/U5MROLGWIQELH1"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed z-90 bottom-10 right-8 bg-green-600 w-14 h-14 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-green-700 hover:drop-shadow-2xl hover:animate-bounce duration-300"
